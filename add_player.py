@@ -21,7 +21,7 @@ def start():
     patronymic = ""
 
     if len(full_name.split(" ")) == 2:
-        q = input("Игрок без отчетства?")
+        q = input("Игрок без отчетства??!")
         for i in DEFAULT_Y:
             if q == i:
                 name_split = split_name(full_name, False)
@@ -64,7 +64,6 @@ def create_player(name, surname, number_player, position, birthday, team, date, 
         elif i == "8x8":
             add_error.add_warn(4)
             return
-    name_sur = name + surname
     
     name_patronymic = ""
 
@@ -82,7 +81,11 @@ def create_player(name, surname, number_player, position, birthday, team, date, 
         weight_int = int(weight)
     except:
         add_error.add_error(1)
-        return  
+        return 
+    
+    if number_player_int > 100 or number_player_int < 1:
+        add_error.add_warn(6)
+        return
     
 
     date_string = check_date(date, True)
@@ -182,7 +185,7 @@ def create_page(
         weight: str
     ):
     
-    with open(f"player_{number}.html", "w+", encoding="utf-8") as file:
+    with open(f"player/player_{number}.html", "w+", encoding="utf-8") as file:
         file.write(f"""<!DOCTYPE html>
 <html lang="en">
 
@@ -212,9 +215,7 @@ def create_page(
                     <h4>{name_patronymic}</h4>
                     <div class="position_number">
                         <div class="number">{number}</div>
-                        <div class="position">{position}
-
-                        </div>
+                        <div class="position">{position}</div>
                     </div>
                 </div>
                 <div class="information">

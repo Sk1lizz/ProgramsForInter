@@ -14,6 +14,7 @@ TYPE_WARN = {
     3: "Type: Warn_FullName \n[Number_Warn]: 3 \n[Reason]: Указано некорректное ФИО игрока",
     4: "Type: Warn_Team \n[Number_Warn]: 4 \n[Reason]: Указана некорректная команда для игрока",
     5: "Type: Warn_Date \n[Number_Warn]: 5 \n[Reason]: Указана некорректная дата",
+    6: "Type: Warn_Number_Player \n[Number_Warn]: 6 \n[Reason]: Указан некорректный номер игрока",
 }
 
 

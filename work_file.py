@@ -1,7 +1,7 @@
 from variable import bool_work
 import list, add_player
 
-def _start():
+def start():
     while bool_work:
         func = input("Введите число: ")
         match func:
